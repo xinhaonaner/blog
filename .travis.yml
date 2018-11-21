@@ -1,0 +1,37 @@
+notifications:
+  slack: cnvs-io:4TcmkF2B3kYyUkhfJmL8dImj
+
+dist: trusty
+
+sudo: required
+
+language: php
+
+php:
+  - 7.1
+  - 7.2
+
+env:
+  global:
+    - setup=basic
+
+matrix:
+  allow_failures:
+    - php: 7.2
+  fast_finish: true
+
+before_install:
+  - if [[ $TRAVIS_PHP_VERSION != 7.2 ]] ; then phpenv config-rm xdebug.ini; fi
+  - mv .env.example .env
+
+install:
+  - composer install --ignore-platform-reqs
+
+before_script:
+  - php artisan canvas:publish:assets -y
+  - php artisan canvas:publish:config -y
+  - php artisan key:generate
+  - echo '1485524707' > storage/canvas_installed.lock
+
+script:
+  - vendor/bin/phpunit

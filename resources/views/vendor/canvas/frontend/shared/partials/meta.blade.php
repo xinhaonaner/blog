@@ -10,7 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="{{ asset('vendor/canvas/assets/images/favicon.png') }}">
+{{--<link rel="icon" type="image/png" href="{{ asset('vendor/canvas/assets/images/favicon.png') }}">--}}
+<link rel="icon" type="image/png" href="https://cdn.weifengchuxing.com/app/upload/client/2018-12-02/K8VNu7H9AXhp5QfmB2jqB94oEMCIujHbyiFv3FBk.png">
 
 <!-- Facebook Open Graph Tags -->
 <meta property="og:title" content="@yield('og-title')">

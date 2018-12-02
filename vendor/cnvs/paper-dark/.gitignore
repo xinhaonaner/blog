@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.project
+
+*.cache
+
+node_modules
+npm-debug.log
+phpunit.xml
+Thumbs.db
+vendor

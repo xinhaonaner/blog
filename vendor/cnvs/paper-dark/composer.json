@@ -1,0 +1,25 @@
+{
+    "name": "cnvs/paper-dark",
+    "description": "Canvas Dark Theme",
+    "keywords": ["canvas", "theme", "dark"],
+    "type": "canvas-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patrick Reid",
+            "email": "reliq@reliqarts.com"
+        }
+    ],
+    "require": {
+        "cnvs/easel": "*"
+    },
+    "extra": {
+        "canvas-theme": {
+            "title": "Paper Dark",
+            "directories": {
+                "public": "public",
+                "views": "resources/views"
+            }
+        }
+    }
+}

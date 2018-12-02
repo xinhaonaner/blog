@@ -1,0 +1,126 @@
+// Main
+
+html {
+    &:not(.ismobile) {
+        .page-loader {
+            background-color: $dark-color;
+
+            .preloader {
+                p {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+body {
+    background: $dark-color;
+    color: $light-color;
+}
+
+header#header {
+    background-color: $dark-header;
+}
+
+#top-search-wrap {
+    background-color: #626262;
+
+    input[type="text"] {
+        background-color: #4a4a4a;
+    }
+
+    #top-search-close {
+        &:hover {
+            background-color: rgba(46, 45, 45, 0.48);
+        }
+    }
+}
+
+.card {
+    background-color: #fdfdfd;
+    color: #5e5e5e;
+}
+
+.dropdown-menu {
+    background-color: #454444;
+
+    > li {
+        > a {
+            &:hover {
+                background-color: rgba($brand-primary, 0.7);
+            }
+        }
+    }
+
+    .divider {
+        background-color: rgba(0, 0, 0, 0.18);
+    }
+
+    &:not([class*=bgm-]) {
+        > li {
+            > a {
+                color: #d8d8d8;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    background-color: lighten($dark-header, 5%);
+
+    .main-menu {
+        a {
+            transition: all 200ms;
+            -moz-transition: all 200ms;
+            -webkit-transition: all 200ms;
+        }
+
+        > li {
+            > a {
+                color: $light-color;
+
+                &:hover {
+                    background-color: rgba($brand-primary, 0.7);
+                    color: $light-color;
+                }
+            }
+
+            &.sub-menu {
+                > a {
+                    &:before, &:after {
+                        color: $light-color;
+                    }
+                }
+
+                ul {
+                    > li {
+                        > a {
+                            &:hover {
+                                color: $light-color;
+                            }
+
+                            &.active {
+                                color: $brand-primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                > a {
+                    background-color: $dark-color;
+                }
+            }
+        }
+
+        .label-default {
+            background-color: #525252;
+        }
+    }
+}

@@ -36,9 +36,9 @@
                     @include('canvas::frontend.blog.partials.author')
 
                 </div>
-                <div class="col-lg-1 col-lg-pull-1 col-md-pull-1" style="position: fixed">
-                    <img src="https://cdn.weifengchuxing.com/app/upload/client/2018-12-02/UAfC4WDD7hTRS8CHvUzHvGmjOV2ricMSPnGscttN.png" alt="支付宝红包">
-                </div>
+                {{--<div class="col-lg-1 col-lg-pull-1 col-md-pull-1" style="position: fixed">--}}
+                    {{--<img src="https://cdn.weifengchuxing.com/app/upload/client/2018-12-02/UAfC4WDD7hTRS8CHvUzHvGmjOV2ricMSPnGscttN.png" alt="支付宝红包">--}}
+                {{--</div>--}}
             </div>
         </div>
     </article>

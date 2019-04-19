@@ -54,7 +54,8 @@ class Handler extends ExceptionHandler
                 break;
 
             case $e instanceof \Symfony\Component\HttpKernel\Exception\HttpException:
-                return response(view('canvas::errors.503'), 503);
+                return response(json_encode(['msg'=>'fail','code'=>0]), 503);
+//                return response(view('canvas::errors.503'), 503);
                 break;
 
             default:

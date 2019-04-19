@@ -8,9 +8,9 @@ use App\Http\Controllers\Controller;
 class TestController extends Controller
 {
     public function index(Request $request) {
-        $data = $request->input();
+        $data  = file_get_contents("php://input");
         info('请求方式：' . $request->method());
-        info('请求参数:' . json_encode($data));
+        info('请求参数:' . $data);
         return 'success';
     }
 }

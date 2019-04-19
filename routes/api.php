@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::get('test', 'TestController@index');
+Route::any('test', 'TestController@index');

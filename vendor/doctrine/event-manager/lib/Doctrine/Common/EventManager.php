@@ -28,7 +28,7 @@ class EventManager
      *
      * @return void
      */
-    public function dispatchEvent($eventName, ?EventArgs $eventArgs = null)
+    public function dispatchEvent($eventName, EventArgs $eventArgs = null)
     {
         if (! isset($this->_listeners[$eventName])) {
             return;

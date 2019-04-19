@@ -31,7 +31,7 @@ class CreateCanvasUsersTable extends Migration
             $table->string('gender', 140)->nullable();
             $table->string('relationship', 140)->nullable();
             $table->string('birthday', 140)->nullable();
-            $table->string('email', 250)->unique();
+            $table->string('email', 191)->unique();
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();

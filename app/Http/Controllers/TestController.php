@@ -16,6 +16,7 @@ class TestController extends Controller
     }
 
     public function upload(TestUploadRequest $request) {
+        header("Access-Control-Allow-Origin: *");
 //        $file = $request->file('file');
         $dir = 'uploads/'.date('Y-m-d');
         $path = $request->file('file')->store($dir);

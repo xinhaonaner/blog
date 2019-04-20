@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TestUploadRequest;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class TestController extends Controller
 {
@@ -19,6 +19,7 @@ class TestController extends Controller
         header("Access-Control-Allow-Origin: *");
         $dir = 'public/'.date('Y-m-d');
         $path = $request->file('file')->store($dir);
+        $path = Storage::url(trim($path,'public/'));
 
         return json_encode(['url'=>url($path),'code'=>200]);
     }

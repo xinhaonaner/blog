@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TestUploadRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,5 +13,12 @@ class TestController extends Controller
         info('请求参数:' . $data);
 //        abort(503, 'Unauthorized action.');
         return 'success';
+    }
+
+    public function upload(TestUploadRequest $request) {
+//        $file = $request->file('file');
+        $dir = 'uploads/'.date('Y-m-d');
+        $path = $request->file('file')->store($dir);
+        return json_encode(['url'=>url($path),'code'=>200]);
     }
 }

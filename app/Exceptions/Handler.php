@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Validation\ValidationException;
 
 class Handler extends ExceptionHandler
 {
@@ -57,7 +58,8 @@ class Handler extends ExceptionHandler
                 return response(json_encode(['msg'=>'fail','code'=>0]), 503);
 //                return response(view('canvas::errors.503'), 503);
                 break;
-
+            case $e instanceof ValidationException:
+                return json_encode(['code'=>'402','msg'=>$e->getMessage()]);
             default:
                 return parent::render($request, $e);
                 break;

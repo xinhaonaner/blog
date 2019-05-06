@@ -27,7 +27,7 @@ class TestController extends Controller
     // 测试接受
     public function recevie(Request $request) {
         $data = $request->input();
-        info('请求参数:' . $data);
+        info('请求参数:' . json_encode($data));
         return 'success';
 
     }

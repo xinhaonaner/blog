@@ -19,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::post('test', 'TestController@index');
+Route::post('test/recevie', 'TestController@recevie');
 Route::post('test/upload', 'TestController@upload');

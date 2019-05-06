@@ -23,4 +23,12 @@ class TestController extends Controller
 
         return json_encode(['url'=>url($path),'code'=>200]);
     }
+
+    // 测试接受
+    public function recevie(Request $request) {
+        $data = $request->input();
+        info('请求参数:' . $data);
+        return 'success';
+
+    }
 }

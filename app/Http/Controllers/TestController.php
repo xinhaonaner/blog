@@ -28,6 +28,7 @@ class TestController extends Controller
     public function recevie(Request $request) {
         $data = $request->input();
         info('请求参数:' . json_encode($data));
+       abort(503, 'Unauthorized action.');
         return 'success';
 
     }

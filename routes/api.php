@@ -19,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::post('test', 'TestController@index');
-Route::any('test/recevie', 'TestController@recevie');
+Route::any('test/receive', 'TestController@recevie');
 Route::post('test/upload', 'TestController@upload');

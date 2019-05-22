@@ -10,6 +10,7 @@ use Canvas\Models\Settings;
 use Illuminate\Http\Request;
 use Canvas\Jobs\BlogIndexData;
 use Canvas\Http\Controllers\Controller;
+use App\Models\UserVisit;
 
 class BlogController extends Controller
 {
@@ -27,6 +28,10 @@ class BlogController extends Controller
         $socialHeaderIconsUser = User::where('id', Settings::socialHeaderIconsUserId())->first();
         $css = Settings::customCSS();
         $js = Settings::customJS();
+        UserVisit::create([
+            'ip' => $request->ip(),
+            'url' => $request->url(),
+        ]);
 
         return view($layout, $data, compact('css', 'js', 'socialHeaderIconsUser'));
     }

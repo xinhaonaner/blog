@@ -179,6 +179,7 @@ return [
         Canvas\CanvasServiceProvider::class,
         // Barryvdh\Debugbar\ServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class
     ],
 
     /*

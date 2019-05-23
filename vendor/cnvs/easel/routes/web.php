@@ -10,11 +10,11 @@ Route::group([
 ], function () {
 
     /* Installation page route. */
-    Route::get('canvas.install', 'Canvas\Http\Controllers\Setup\InstallController@index')->name('canvas.install');
+    // Route::get('canvas.install', 'Canvas\Http\Controllers\Setup\InstallController@index')->name('canvas.install');
 
     /* Fully-installed and configured routes. */
     Route::group([
-        'middleware' => RouteHelper::getInstalledMiddleware(),
+        // 'middleware' => RouteHelper::getInstalledMiddleware(),
     ], function () {
         Route::get('/', 'Canvas\Http\Controllers\Frontend\BlogController@index')->name('canvas.home');
 

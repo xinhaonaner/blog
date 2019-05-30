@@ -16,6 +16,7 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '290dd4ba42f11019134caca05dbefe3f' => __DIR__ . '/..' . '/teamtnt/tntsearch/helper/helpers.php',
+        '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -23,6 +24,10 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
     );
 
     public static $prefixLengthsPsr4 = array (
+        'z' => 
+        array (
+            'zgldh\\QiniuStorage\\' => 19,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -64,6 +69,10 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
         'R' => 
         array (
             'Ramsey\\Uuid\\' => 12,
+        ),
+        'Q' => 
+        array (
+            'Qiniu\\' => 6,
         ),
         'P' => 
         array (
@@ -117,6 +126,10 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
     );
 
     public static $prefixDirsPsr4 = array (
+        'zgldh\\QiniuStorage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -226,6 +239,10 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
+        ),
+        'Qiniu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu',
         ),
         'Psr\\Log\\' => 
         array (
@@ -396,10 +413,13 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\TestController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\TestUploadRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TestUploadRequest.php',
+        'App\\Models\\UserVisit' => __DIR__ . '/../..' . '/app/Models/UserVisit.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -3743,6 +3763,24 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
         'Psr\\Log\\NullLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/NullLogger.php',
         'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
+        'Qiniu\\Auth' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Auth.php',
+        'Qiniu\\Cdn\\CdnManager' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Cdn/CdnManager.php',
+        'Qiniu\\Config' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Config.php',
+        'Qiniu\\Etag' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Etag.php',
+        'Qiniu\\Http\\Client' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Http/Client.php',
+        'Qiniu\\Http\\Error' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Http/Error.php',
+        'Qiniu\\Http\\Request' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Http/Request.php',
+        'Qiniu\\Http\\Response' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Http/Response.php',
+        'Qiniu\\Processing\\ImageUrlBuilder' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Processing/ImageUrlBuilder.php',
+        'Qiniu\\Processing\\Operation' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Processing/Operation.php',
+        'Qiniu\\Processing\\PersistentFop' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Processing/PersistentFop.php',
+        'Qiniu\\Rtc\\AppClient' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Rtc/AppClient.php',
+        'Qiniu\\Storage\\ArgusManager' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Storage/ArgusManager.php',
+        'Qiniu\\Storage\\BucketManager' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Storage/BucketManager.php',
+        'Qiniu\\Storage\\FormUploader' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Storage/FormUploader.php',
+        'Qiniu\\Storage\\ResumeUploader' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Storage/ResumeUploader.php',
+        'Qiniu\\Storage\\UploadManager' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Storage/UploadManager.php',
+        'Qiniu\\Zone' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/Zone.php',
         'Ramsey\\Uuid\\BinaryUtils' => __DIR__ . '/..' . '/ramsey/uuid/src/BinaryUtils.php',
         'Ramsey\\Uuid\\Builder\\DefaultUuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/DefaultUuidBuilder.php',
         'Ramsey\\Uuid\\Builder\\DegradedUuidBuilder' => __DIR__ . '/..' . '/ramsey/uuid/src/Builder/DegradedUuidBuilder.php',
@@ -4579,6 +4617,7 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
         'UpdateCanvasPostsRenameIsDraftColumnToIsPublished' => __DIR__ . '/..' . '/cnvs/easel/database/migrations/2017_02_18_101232_update_canvas_posts_rename_is_draft_column_to_is_published.php',
         'UpdateCanvasPostsTableToIncludeAuthorId' => __DIR__ . '/..' . '/cnvs/easel/database/migrations/2016_11_07_144904_update_canvas_posts_table_to_include_author_id.php',
         'UpdateCanvasSettingValueType' => __DIR__ . '/..' . '/cnvs/easel/database/migrations/2016_12_17_203122_update_canvas_setting_value_type.php',
+        'UserVisit' => __DIR__ . '/../..' . '/database/migrations/2019_05_22_153213_UserVisit.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
@@ -4648,6 +4687,25 @@ class ComposerStaticInit329fcedd1dcfdbfa6e0daeddd85df067
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'zgldh\\QiniuStorage\\Plugins\\AvInfo' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/AvInfo.php',
+        'zgldh\\QiniuStorage\\Plugins\\DownloadUrl' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/DownloadUrl.php',
+        'zgldh\\QiniuStorage\\Plugins\\Fetch' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/Fetch.php',
+        'zgldh\\QiniuStorage\\Plugins\\ImageExif' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/ImageExif.php',
+        'zgldh\\QiniuStorage\\Plugins\\ImageInfo' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/ImageInfo.php',
+        'zgldh\\QiniuStorage\\Plugins\\ImagePreviewUrl' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/ImagePreviewUrl.php',
+        'zgldh\\QiniuStorage\\Plugins\\LastReturn' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/LastReturn.php',
+        'zgldh\\QiniuStorage\\Plugins\\PersistentFop' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/PersistentFop.php',
+        'zgldh\\QiniuStorage\\Plugins\\PersistentStatus' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/PersistentStatus.php',
+        'zgldh\\QiniuStorage\\Plugins\\PrivateDownloadUrl' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/PrivateDownloadUrl.php',
+        'zgldh\\QiniuStorage\\Plugins\\PrivateImagePreviewUrl' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/PrivateImagePreviewUrl.php',
+        'zgldh\\QiniuStorage\\Plugins\\Qetag' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/Qetag.php',
+        'zgldh\\QiniuStorage\\Plugins\\UploadToken' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/UploadToken.php',
+        'zgldh\\QiniuStorage\\Plugins\\VerifyCallback' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/VerifyCallback.php',
+        'zgldh\\QiniuStorage\\Plugins\\WithUploadToken' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/Plugins/WithUploadToken.php',
+        'zgldh\\QiniuStorage\\QiniuAdapter' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/QiniuAdapter.php',
+        'zgldh\\QiniuStorage\\QiniuFilesystemServiceProvider' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/QiniuFilesystemServiceProvider.php',
+        'zgldh\\QiniuStorage\\QiniuStorage' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/QiniuStorage.php',
+        'zgldh\\QiniuStorage\\QiniuUrl' => __DIR__ . '/..' . '/zgldh/qiniu-laravel-storage/src/QiniuUrl.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

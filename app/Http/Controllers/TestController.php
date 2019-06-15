@@ -97,7 +97,7 @@ class TestController extends Controller
     public function headers(Request $request)
     {
         $header = $request->headers;
-        info('请header:' . json_encode($header));
+        info('请header:' . json_encode($header->all()));
         return 'success';
 
     }

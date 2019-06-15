@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('test', 'TestController@index');
 Route::any('test/receive', 'TestController@recevie');
+Route::any('test/headers', 'TestController@headers');
 Route::post('test/upload', 'TestController@upload');
 Route::post('upload/uploadFile', 'UploadController@uploadFile');
 Route::post('test/mysql', 'TestController@mysql');

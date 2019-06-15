@@ -9,30 +9,38 @@ use Illuminate\Support\Facades\Storage;
 
 class TestController extends Controller
 {
-    public function index(Request $request) {
-        $data  = file_get_contents("php://input");
+    public function index(Request $request)
+    {
+        $data = file_get_contents("php://input");
         info('请求参数:' . $data);
-//        abort(503, 'Unauthorized action.');
+
+        //        abort(503, 'Unauthorized action.');
         return 'success';
     }
 
-    public function upload(TestUploadRequest $request) {
+    public function upload(TestUploadRequest $request)
+    {
         header("Access-Control-Allow-Origin: *");
-        $dir = 'public/'.date('Y-m-d');
+        $dir = 'public/' . date('Y-m-d');
         $path = $request->file('file')->store($dir);
-        $path = Storage::url(trim($path,'public/'));
+        $path = Storage::url(trim($path, 'public/'));
 
-        return json_encode(['url'=>url($path),'code'=>200]);
+        return json_encode([
+            'url' => url($path),
+            'code' => 200,
+        ]);
     }
 
     // 测试接受
-    public function recevie(Request $request) {
+    public function recevie(Request $request)
+    {
         // $data  = file_get_contents("php://input");
         // info('请求参数1:' . $data);
 
         $data = $request->input();
         info('请求参数2:' . json_encode($data));
-       // abort(503, 'Unauthorized action.');
+
+        // abort(503, 'Unauthorized action.');
         return 'success';
 
     }
@@ -84,5 +92,13 @@ class TestController extends Controller
         info('执行成功，总耗时' . round($t2 - $t1, 3) . '秒');
         echo '执行成功，总耗时' . round($t2 - $t1, 3) . '秒';
         exit;
+    }
+
+    public function headers(Request $request)
+    {
+        $header = $request->headers;
+        info('请header:' . json_encode($header));
+        return 'success';
+
     }
 }

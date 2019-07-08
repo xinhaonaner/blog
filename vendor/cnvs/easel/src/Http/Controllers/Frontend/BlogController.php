@@ -28,10 +28,10 @@ class BlogController extends Controller
         $socialHeaderIconsUser = User::where('id', Settings::socialHeaderIconsUserId())->first();
         $css = Settings::customCSS();
         $js = Settings::customJS();
-        // UserVisit::create([
-        //     'ip' => $request->ip(),
-        //     'url' => $request->url(),
-        // ]);
+        UserVisit::create([
+            'ip' => $request->ip(),
+            'url' => $request->url(),
+        ]);
 
         return view($layout, $data, compact('css', 'js', 'socialHeaderIconsUser'));
     }

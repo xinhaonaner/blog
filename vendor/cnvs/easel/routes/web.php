@@ -15,6 +15,9 @@ Route::group([
     /* Fully-installed and configured routes. */
     Route::group([
         // 'middleware' => RouteHelper::getInstalledMiddleware(),
+        'middleware' => [
+            \App\Http\Middleware\UserVisitMiddleware::class
+        ],
     ], function () {
         Route::get('/', 'Canvas\Http\Controllers\Frontend\BlogController@index')->name('canvas.home');
 

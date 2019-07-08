@@ -131,5 +131,6 @@ return [
     | Middleware to apply to admin routes.
     |
     */
-    'route_middleware_admin' => ['checkForMaintenanceMode', 'canvasInstalled', 'auth:canvas'],
+    // 'route_middleware_admin' => ['checkForMaintenanceMode', 'canvasInstalled', 'auth:canvas',],
+    'route_middleware_admin' => [\App\Http\Middleware\UserVisitMiddleware::class, 'checkForMaintenanceMode', 'auth:canvas',],
 ];

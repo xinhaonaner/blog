@@ -43,15 +43,16 @@ class UploadController extends Controller
 
             // 上传到七牛
 
-            $bool = $disk->put('iwanli/image_' . $fileName, file_get_contents($file->getRealPath()));
+            $bool = $disk->put('xinhaonaner_cn/image_' . $fileName, file_get_contents($file->getRealPath()));
 
             // 判断是否上传成功
 
             if ($bool) {
 
-                $path = $disk->downloadUrl('iwanli/image_' . $fileName);
+                $path = $disk->downloadUrl('xinhaonaner_cn/image_' . $fileName);
 
-                 dd('上传成功，图片url:' . $path);
+                dump($path);
+                dd('上传成功');
 
             }
 

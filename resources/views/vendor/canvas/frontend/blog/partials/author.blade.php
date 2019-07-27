@@ -1,5 +1,5 @@
 {{--<img style="margin: 0 15px 0 0" class="img-responsive img-circle author-img" src="https://www.gravatar.com/avatar/{{ md5($user->email) }}?d=identicon&s=150" title="{{ $user->first_name .  ' ' . $user->last_name }}">--}}
-<img style="margin: 0 15px 0 0" class="img-responsive author-img" src="http://cdn.xinhaonaner.cn/xinhaonaner_cn/image_91fb6f6297a4ff5955a1019d93ba5a42.jpg" title="{{ $user->first_name .  ' ' . $user->last_name }}">
+<img style="margin: 0 15px 0 0" class="img-responsive author-img" src="https://cdn.xinhaonaner.cn/xinhaonaner_cn/image_91fb6f6297a4ff5955a1019d93ba5a42.jpg" title="{{ $user->first_name .  ' ' . $user->last_name }}">
 <div id="author-content" style="margin-top: -1px">
     <h4 id="auth-name"><strong>{{ $user->first_name .  ' ' . $user->last_name }}</strong></h4>
     <span class="small">

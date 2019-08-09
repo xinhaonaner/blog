@@ -41,6 +41,8 @@ class BlogController extends Controller
     public function showPost($slug, Request $request)
     {
         $post = Post::with('tags')->whereSlug($slug)->firstOrFail();
+        // 点击率
+        Post::where('id', $post->id)->increment('click_num');
         $socialHeaderIconsUser = User::where('id', Settings::socialHeaderIconsUserId())->first();
         $user = User::where('id', $post->user_id)->firstOrFail();
         $tag = $request->get('tag');

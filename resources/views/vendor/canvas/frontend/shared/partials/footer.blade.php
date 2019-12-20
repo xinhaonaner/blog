@@ -5,8 +5,7 @@
     <div style="text-align: center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <hr>
-                <p class="small">Proudly powered by <a href="https://github.com/xinhaonaner" target="_blank">Xinhaonaner</a> &#183; <a href="{!! route('canvas.admin') !!}"><i class="fa fa-lock"></i> Sign In</a>
+                <p class="small"><a href="http://beian.miit.gov.cn/" target="_blank">{{getIcpNum()}}</a>
                 </p>
             </div>
         </div>
